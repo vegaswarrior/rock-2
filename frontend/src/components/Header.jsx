@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
-import logo from '../assets/logo.png';
+import logo from '../assets/RockenMyVibeLogo.svg';
 import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
@@ -33,12 +33,12 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
+      <Navbar className='navbar-1' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              <img src={logo} alt='ProShop' />
-              ProShop
+              <img src={logo} className='rocken-logo' alt='ProShop' />
+              Rocken My Vibe
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />

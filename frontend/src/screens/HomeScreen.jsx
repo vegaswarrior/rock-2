@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import { Link } from 'react-router-dom';
@@ -19,7 +19,16 @@ const HomeScreen = () => {
 
   return (
     <>
+      <Container className='hero-container'>
+        <Row>
+          <h1 className='text-center'>Welcome to Rocken My Vibe</h1>
+        </Row>
+       </Container>
+
+
+
       {!keyword ? (
+   
         <ProductCarousel />
       ) : (
         <Link to='/' className='btn btn-light mb-4'>
