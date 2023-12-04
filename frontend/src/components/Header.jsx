@@ -38,7 +38,7 @@ const Header = () => {
           <LinkContainer to='/'>
             <Navbar.Brand>
               <img src={logo} className='rocken-logo' alt='ProShop' />
-              Rocken My Vibe
+              <span className="nav-text">Rocken My Vibe</span>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -47,7 +47,7 @@ const Header = () => {
               <SearchBox />
               <LinkContainer to='/cart'>
                 <Nav.Link>
-                  <FaShoppingCart /> Cart
+                  <FaShoppingCart /> <span className="nav-text">Cart</span>
                   {cartItems.length > 0 && (
                     <Badge pill bg='success' style={{ marginLeft: '5px' }}>
                       {cartItems.reduce((a, c) => a + c.qty, 0)}
@@ -57,26 +57,26 @@ const Header = () => {
               </LinkContainer>
               {userInfo ? (
                 <>
-                  <NavDropdown title={userInfo.name} id='username'>
+                  <NavDropdown className="nav-text" title={userInfo.name} id='username'>
                     <LinkContainer to='/profile'>
-                      <NavDropdown.Item>Profile</NavDropdown.Item>
+                      <NavDropdown.Item><span className="nav-text">Profile</span></NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Item onClick={logoutHandler}>
-                      Logout
+                    <span className="nav-text">Logout</span>
                     </NavDropdown.Item>
                   </NavDropdown>
                 </>
               ) : (
-                <LinkContainer to='/login'>
+                <LinkContainer className="nav-text" to='/login'>
                   <Nav.Link>
-                    <FaUser /> Sign In
+                    <FaUser /> <span className="nav-text">Sign In</span>
                   </Nav.Link>
                 </LinkContainer>
               )}
 
               {/* Admin Links */}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
+                <NavDropdown  title='Admin' id='adminmenu'>
                   <LinkContainer to='/admin/productlist'>
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
