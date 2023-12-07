@@ -8,6 +8,7 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+import RideWave from '../assets/Ride.png'
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -20,8 +21,11 @@ const HomeScreen = () => {
   return (
     <>
       <Container className='hero-container'>
+      <h1 className='text-center text-white'>Welcome to Rocken My Vibe</h1>
         <Row>
-          <h1 className='text-center'>Welcome to Rocken My Vibe</h1>
+          <Col md={6}>
+             <img src={RideWave} className="waveRider" alt="" />
+          </Col>
         </Row>
        </Container>
 

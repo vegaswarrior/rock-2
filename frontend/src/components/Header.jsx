@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
-import logo from '../assets/RockenMyVibeLogo.svg';
+// import logo from '../assets/RockenMyVibeLogo.svg';
 import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
@@ -35,10 +35,32 @@ const Header = () => {
     <header>
       <Navbar className='navbar-1' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <LinkContainer to='/'>
+          {/* <LinkContainer to='/'>
             <Navbar.Brand>
               <img src={logo} className='rocken-logo' alt='ProShop' />
               <span className="nav-text">Rocken My Vibe</span>
+            </Navbar.Brand>
+          </LinkContainer> */}
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              
+              <span className="nav-text text-white">Home</span>
+            </Navbar.Brand>
+          </LinkContainer>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              
+              <span className="nav-text text-white">Our Story</span>
+            </Navbar.Brand>
+          </LinkContainer>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <span className="nav-text text-white">Shop</span>
+            </Navbar.Brand>
+          </LinkContainer>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <span className="nav-text text-white">Contact</span>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />

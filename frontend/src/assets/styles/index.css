@@ -1,6 +1,6 @@
 main {
   min-height: 80vh;
-  background-color: aqua;
+  background-image: linear-gradient(to right, purple,aqua) ;
 }
 
 .rating span {
@@ -64,9 +64,14 @@ table th {
   margin-right: 10px;
 }
 .navbar-1 {
-  background-color: aqua;
+  background-color: transparent;
   color: black
 }
 .nav-text{
   color: black
+}
+.waveRider{
+  width: 900px;
+  height: 900px;
+  z-index: -999;
 }
