@@ -35,21 +35,16 @@ const Header = () => {
     <header>
       <Navbar className='navbar-1' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          {/* <LinkContainer to='/'>
-            <Navbar.Brand>
-              <img src={logo} className='rocken-logo' alt='ProShop' />
-              <span className="nav-text">Rocken My Vibe</span>
-            </Navbar.Brand>
-          </LinkContainer> */}
+ 
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
           <LinkContainer to='/'>
-            <Navbar.Brand>
-              
+            <Navbar.Brand>      
               <span className="nav-text text-white">Home</span>
             </Navbar.Brand>
           </LinkContainer>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              
               <span className="nav-text text-white">Our Story</span>
             </Navbar.Brand>
           </LinkContainer>
@@ -63,10 +58,8 @@ const Header = () => {
               <span className="nav-text text-white">Contact</span>
             </Navbar.Brand>
           </LinkContainer>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <SearchBox />
+              <SearchBox className="searchBox" />
               <LinkContainer to='/cart'>
                 <Nav.Link>
                   <FaShoppingCart /> <span className="nav-text">Cart</span>

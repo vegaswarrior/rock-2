@@ -1,14 +1,14 @@
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Product from '../components/Product';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
-import ProductCarousel from '../components/ProductCarousel';
+// import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
-import RideWave from '../assets/Ride.png'
+import RideWave from '../assets/wave.svg'
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -21,24 +21,27 @@ const HomeScreen = () => {
   return (
     <>
       <Container className='hero-container'>
-      <h1 className='text-center text-white'>Welcome to Rocken My Vibe</h1>
         <Row>
           <Col md={6}>
              <img src={RideWave} className="waveRider" alt="" />
+          </Col>
+          <Col md={6}>
+             <h1 className='text-white'>Welcome to Rocken My Vibe</h1>
+             <Button className="btn btn-large btn-primary">Shop Now</Button>
           </Col>
         </Row>
        </Container>
 
 
 
-      {!keyword ? (
+      {/* {!keyword ? (
    
         <ProductCarousel />
       ) : (
         <Link to='/' className='btn btn-light mb-4'>
           Go Back
         </Link>
-      )}
+      )} */}
       {isLoading ? (
         <Loader />
       ) : error ? (
